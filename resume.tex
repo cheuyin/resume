@@ -1,88 +1,205 @@
-\documentclass[11pt]{article} % fontsize 10pt/11pt/12pt
+% ----- DOCUMENT CLASS ----- %
+\documentclass[letterpaper]{article}
 
-\usepackage[margin=1in, letterpaper]{geometry}
-\setcounter{secnumdepth}{0} % remove section numbering
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\titlespacing{\subsection}{0pt}{*0}{*0} % remove vertical spacing above and below
-\titlespacing{\subsubsection}{0pt}{*0}{*0}
-\titleformat{\section}{\large\bfseries\uppercase}{}{}{}[\titlerule]
-\titleformat*{\subsubsection}{\large\itshape}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
 \usepackage{enumitem}
-\setlist[itemize]{noitemsep,left=0pt .. \parindent}
-\pagestyle{empty} % remove page number
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+
+
+% ----- FONTS ----- %
+\usepackage[sfdefault]{noto-sans}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% ----- MARGINS ----- %
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensures generated PDF is machine / ATS readable %
 \pdfgentounicode=1
 
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% ===== RESUME STARTS HERE ===== %
 
 \begin{document}
 
+% ----- CO-OP HEADER ----- %
+\noindent\includegraphics[width=\textwidth]{assets/coop-banner.png}
+
+% ----- RESUME HEADER ----- %
 \begin{center}
-	\begin{minipage}{0.5\textwidth}
-		{\Huge\bfseries
-			BASE ROVER % Name Here
-		} \\ \medskip
-		Resume Template % Title [optional]
-	\end{minipage} \hfill
-	\begin{minipage}{0.4\textwidth}
-		\raggedleft
-		Email: base@rover.com \\
-		Mobile: 123 456 7890 \\
-		LinkedIn: linkedin.com/username \\
-		GitHub: github.com/username
-	\end{minipage}
+    \color{NavyBlue}
+    \textbf{\huge \scshape Stanley Cheung} \\ 
+    \vspace{5pt}
+    \color{black}
+    {\large Major in Computer Science, Year 3} \\
+    \vspace{5pt}    
+		\href{https://stanleycheung.com}{\underline{stanleycheung.com}} $|$
+    \href{mailto:yinstanleycheung@gmail.com}{\underline{yinstanleycheung@gmail.com}} $|$ 
+    \href{https://github.com/cheuyin}{\underline{github.com/cheuyin}} $|$
+    +1 (604) 726 7263
 \end{center}
 
+%-----------EDUCATION-----------
+\color{NavyBlue}
 \section{Education}
-%=================%
-\subsection{University of Post Graduation, City $|$ {\normalfont\itshape Degree Name} \hfill 2024}
-\begin{itemize}
-	\item Cumulative GPA: 3.69
-	\item \textit{magna cum laude} 
-  \item Related Coursework: Computer Architecture, Database Management, Cybersecurity
-\end{itemize}
+\color{black}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {The University of British Columbia $|$ GPA: 3.89/4.00}{Sep. 2022 -- May 2027}
+      {B.Sc, Major in Computer Science}{Vancouver, BC}
+      \resumeItemListStart 
+        \resumeItem{\textbf{Courses}: Relational Databases, Algorithms \& Data Structures, Computer Systems, Object-Oriented Programming}
+        \resumeItem{\textbf{Awards:} 2023--2024 Charles \& Jane Banks Scholarship, 2022--2023 UBC Science Scholar (standing of 90\%+) \& Dean's List}
+      \resumeItemListEnd 
+  \resumeSubHeadingListEnd
 
+%-----------PROGRAMMING SKILLS-----------
+\color{NavyBlue}
+\section{Technical Skills \& Certifications}
+\color{Black}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        \textbf{Languages:}{ TypeScript, JavaScript, Python, C, C++, Java, SQL} \\
+        \textbf{Frameworks:}{ React, Express.js, Recoil, MUI, Ant Design} \\
+        \textbf{Other:}{ Node.js, PostgreSQL, Docker, Git, AWS, RESTful APIs, Sequelize ORM, Linux, React Query, Prometheus, Jira} \\
+        \textbf{Certifications:}{ AWS Certified Cloud Practitioner}
+    }}
+ \end{itemize}
+
+%----------- EXPERIENCE-----------
+\color{NavyBlue}
 \section{Experience}
-%=================%
-\subsection{Company ABC \hfill City, State (or Remote)}
-\subsubsection{Position Title \hfill  Month Year - Month Year}
-\begin{itemize}
-	\item Beginning with your most recent position, describe your experience, skills, and resulting outcomes in bullet or paragraph form.
-	\item Begin each line with an action verb and include details that will help the reader understand your accomplishments, skills, knowledge, abilities, or achievements.
-	\item Quantify where possible. Do not use personal pronouns; each line should be a phrase rather than a full sentence.
-\end{itemize}
+\color{black}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Full Stack Developer $|$ \normalfont\emph{React, TypeScript, Express.js, PostgreSQL, AWS}}{Jan. 2024 -- Jul. 2024}
+      {VoltSafe Inc.} {Vancouver, BC}
+        \resumeItemListStart
+          \resumeItem{Designed and implemented an end-to-end roles-based access control system with an Express.js, PostgreSQL, and AWS Cognito backend, ensuring controlled access to the internal admin dashboard.}
+          \resumeItem{Developed and Dockerized a server monitoring system and visualization web app using React, Express, and Prometheus, enabling real-time collection and analysis of CPU, RAM, and disk metrics across 7+ EC2 web and database servers.}
+          \resumeItem{Developed an image and document storage system with RESTful API for the marina management app, leveraging AWS S3 to optimize performance and reduce bandwidth costs, enabling seamless upload and retrieval of customer documents and vessel images.}
+					\resumeItem{Conducted performance analysis of the marina management app using Chrome Lighthouse, reducing total app bundle size by 22\% by pruning unused static assets, leading to improved load times.}
+					\resumeItem{Authored a comprehensive QA report, identifying over 15 functionality and UI bugs across 3+ major browsers, and provided detailed reproduction steps and actionable next steps, enhancing overall application stability.}
+        \resumeItemListEnd
+    
+  \resumeSubheading
+      {Mobile Developer (Volunteer) $|$ \normalfont\emph{React Native, Figma}}{Jun. 2023 -- Oct. 2023}
+      {Eat n' Log } {Vancouver, BC}
+      \resumeItemListStart
+        \resumeItem{Worked with a multidisciplinary team of 15 using the Scrum methodology to develop the beta for a cross-platform mobile app, enabling food lovers to seamlessly document and share their favourite dishes and dining experiences.}
+        \resumeItem{Independently developed five core UI features with React Native: search bar, filters by categories, home screen, authentication flow, and editable user entry pages.}
+    	\resumeItemListEnd
 
-\subsection{Position Title \hfill Mar 2020 - Nov 2022}
-\subsubsection{Company XYZ \hfill City, State}
-\begin{itemize}
-	\item XYZ method - Accomplished [X] as measured by [Y], by doing [Z].
-	\item CAR method - Context, Action, Result. 
-	\item STAR method - Situation, Task, Action, Result.
-	\item Be consistent with headers and sub-headers. 
-\end{itemize}
+    % From the template:  
+    % \resumeSubheading
+    %   {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
+    %   {Southwestern University}{Georgetown, TX}
+    %   \resumeItemListStart
+    %     \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
+    %     \resumeItem{Developed a game in Java to test the generated dungeons}
+    %     \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
+    %     \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
+    %     \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
+    %     \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
+    %   \resumeItemListEnd
 
-\section{Certification \& Awards}
-%===============================%
-\begin{enumerate}[label=\null, left=0pt..0pt, itemsep=0pt]
-	\item Some programming bootcamp, Location. \hfill 2023
-	\item Forbes Top 15 Procrastinators under 15. \hfill 2022
-	\item Perticipation award for attending workshop. \hfill 2021
-\end{enumerate}
+  \resumeSubHeadingListEnd
+  
+%-----------PROJECTS-----------
+\color{NavyBlue}
+\section{Technical Projects}
+\color{black}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Image Compression Tool} $|$ C++}{Jul. 2023}
+          \resumeItemListStart
+            \resumeItem{Built an image compression program in C++ that can process images up to 5 million pixels.}
+            \resumeItem{Implemented a recursive traversal function to prune subtrees within a user-determined tolerance threshold, enabling compression at different intensities.}
+            \resumeItem{Leveraged dynamic programming to calculate average HSLA pixel values in $O(1)$ time instead of $O(n)$.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{TwoChess} $|$ \emph{Java, JUnit, Swing}}{Apr. 2023}
+          \resumeItemListStart
+            \resumeItem{Created a two-player chess game using the Model-View-Controller (MVC) design pattern.}
+            \resumeItem{Wrote a full-fledged suite of unit tests with JUnit resulting in 100\% code coverage.}
+            \resumeItem{Implemented local storage using JSON, allowing users to save and resume past matches.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
-\section{Skills \& Interests}
-%===========================%
-\begin{description}[itemsep=0pt]
-	\item[Technical] List computer software and programming languages
-	\item[Language] List foreign languages and your level of fluency
-	\item[Laboratory] List scientific / research lab techniques or tools [If Applicable]
-	\item[Interests] List activities you enjoy that may spark interview conversation
-\end{description}
+ 
+% %----------INTERESTS%----------
+% \color{NavyBlue}
+% \section{Interests}
+% \color{black}
+% Traveling, language-learning, reading, mindfulness and meditation
 
-\section{Projects}
-%=================
-\subsection{Project Neme $|$ \normalfont\textit{github.com/project-link} \hfill 2019}
-\begin{itemize}
-  \item Tech used, Language, Frameworks etc.
-  \item Implemented ABC feature
-  \item Optimised XYZ by 50\%
-\end{itemize}
-
+%-------------------------------------------
 \end{document}
