@@ -15,6 +15,7 @@
 \input{glyphtounicode}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{graphicx}
+\usepackage{fontawesome5}
 
 
 % ----- FONTS ----- %
@@ -167,6 +168,15 @@
 \section{Technical Projects}
 \color{black}
     \resumeSubHeadingListStart
+    \resumeProjectHeading
+    {\textbf{Pathfinding Visualizer \href{https://pathfindingvisualizer.com}{\faLink}} $|$ TypeScript, React, GitHub Actions, Mantine, Styled Components}{August 2024}
+      \resumeItemListStart
+        \resumeItem{Built a web app for visualizing pathfinding algorithms like Dijkstra's, A*, and DFS.}
+        \resumeItem{Implemented the recursive backtracking algorithm to generate random mazes inside the visualizer.}
+        \resumeItem{Enhanced the app's responsiveness by dynamically calculating grid dimensions based on screen size.}
+        \resumeItem{Set up a Continuous Deployment pipeline using GitHub Actions to automate deployment.}
+      \resumeItemListEnd
+
       \resumeProjectHeading
         {\textbf{Eat n' Log} $|$ React Native, Redux, Figma}{June 2023 -- October 2023}
           \resumeItemListStart
