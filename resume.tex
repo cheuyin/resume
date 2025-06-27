@@ -170,12 +170,12 @@
 \color{black}
     \resumeSubHeadingListStart
     \resumeProjectHeading
-    {\textbf{Pathfinding Visualizer \href{https://pathfindingvisualizer.com}{\faLink}} $|$ TypeScript, GitHub Actions, React}{August 2024}
+    {\textbf{Pathfinding Visualizer \href{https://pathfindingvisualizer.com}{\faLink}} $|$ TypeScript, React, HTML5 Canvas}{June 2025}
       \resumeItemListStart
-        \resumeItem{Built a web app for visualizing pathfinding algorithms like Dijkstra's, A*, and DFS.}
+        \resumeItem{Built a web app for visualizing pathfinding algorithms (Dijkstra's, A*, and DFS) and random maze-generation algorithms.}
         \resumeItem{Reduced animation time by 30\% (35,000 ms to 25,000 ms) by using \texttt{React.memo} and \texttt{useCallback}, cutting unnecessary renders from 115,000 to 16,000 (86\% reduction).}
-        \resumeItem{Implemented the recursive backtracking algorithm to generate random mazes inside the visualizer.}
-        \resumeItem{Set up a Continuous Deployment pipeline using GitHub Actions to automate deployment.}
+        \resumeItem{Refactored React DOM-based rendering to HTML5 Canvas, achieving 8-10x performance improvement (7 FPS to 60+ FPS) through \texttt{requestAnimationFrame} animation loops and elimination of React re-render overhead.}
+        \resumeItem{Set up a Continuous Deployment pipeline using GitHub Actions to automate deployment when pushed to main branch.}     
       \resumeItemListEnd
 
       \resumeProjectHeading
