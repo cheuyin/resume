@@ -94,18 +94,13 @@
 
 \begin{document}
 
-% ----- CO-OP HEADER ----- %
-% Currently, I think this is just a waste of space -- not necessary.
-% \noindent\includegraphics[width=\textwidth]{assets/coop-banner.png}
-
 % ----- RESUME HEADER ----- %
 \begin{center}
     \color{NavyBlue}
-    \textbf{\huge \scshape Stanley Cheung} \\ 
+    \textbf{\huge \scshape Stanley Cheung} \\
     \vspace{5pt}
     \color{black}
-    \vspace{5pt}    
-		% \href{https://stanleycheung.com}{\underline{stanleycheung.com}} $|$
+    \vspace{5pt}
     \href{https://github.com/cheuyin}{\underline{github.com/cheuyin}} $|$
     \href{mailto:yinstanleycheung@gmail.com}{\underline{yinstanleycheung@gmail.com}}
 \end{center}
@@ -118,10 +113,11 @@
     \resumeSubheading
       {The University of British Columbia $|$ GPA: 4.20/4.33}{September 2022 -- May 2027}
       {B.Sc, Major in Computer Science}{Vancouver, BC}
-      \resumeItemListStart 
-        \resumeItem{\textbf{Courses}: Machine Learning, Computer Networking, Relational Databases, Algorithms \& Data Structures, Computer Systems \& Hardware, Object-Oriented Programming}
+      \resumeItemListStart
+        \resumeItem{\textbf{Courses}: Machine Learning, Computer Networking, Relational Databases, Algorithms \& Data Structures, Computer Systems \& Hardware, Object-Oriented
+Programming}
         \resumeItem{\textbf{Awards:} 2023--2024 Charles \& Jane Banks Scholarship, 2022--2023 UBC Science Scholar (standing of 90\%+) \& Dean's List}
-      \resumeItemListEnd 
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 %----------- EXPERIENCE-----------
@@ -133,12 +129,16 @@
       {Software Engineer Intern $|$ \normalfont{TypeScript, Express.js, PostgreSQL, AWS, React}}{January 2024 -- July 2024}
       {VoltSafe Inc.} {Vancouver, BC}
         \resumeItemListStart
-          \resumeItem{Designed and implemented an end-to-end roles-based access control system with an Express.js, PostgreSQL, and AWS Cognito backend, ensuring controlled access to the internal admin dashboard.}
-          \resumeItem{Developed and Dockerized a server monitoring system using React, Express, and Prometheus, enabling real-time collection and analysis of CPU, RAM, and disk metrics across 7+ EC2 web and database servers.}
-          \resumeItem{Developed an image and document storage system with a RESTful API for the marina management app, leveraging AWS S3 to optimize performance and reduce bandwidth costs, enabling users to upload, storage, and retrieve documents and images.}
-					\resumeItem{Conducted a performance analysis of the marina management app using Chrome Lighthouse, reducing total app bundle size by 22\% by pruning unused static assets, leading to improved load times.}
+          \resumeItem{Designed and implemented an end-to-end roles-based access control system with an Express.js, PostgreSQL, and AWS Cognito backend, ensuring controlled access to the
+  internal admin dashboard.}
+          \resumeItem{Developed and Dockerized a server monitoring system using React, Express, and Prometheus, enabling real-time collection and analysis of CPU, RAM, and disk metrics
+across 7+ EC2 web and database servers.}
+          \resumeItem{Developed an image and document storage system with a RESTful API for the marina management app, leveraging AWS S3 to optimize performance and reduce bandwidth
+costs, enabling users to upload, storage, and retrieve documents and images.}
+          \resumeItem{Conducted a performance analysis of the marina management app using Chrome Lighthouse, reducing total app bundle size by 22\% by pruning unused static assets,
+leading to improved load times.}
         \resumeItemListEnd
-      
+
       \resumeSubheading
         {AP Computer Science Instructor}{October 2022 -- February 2023}
         {iSmart Education Canada}{Vancouver, BC}
@@ -147,63 +147,60 @@
           \resumeItem{Generated \$3000+ revenue for the company part-time.}
           \resumeItem{Exceeded expectations by supporting students, some still in primary school, in achieving 5/5 on the AP CSA 2023 exam.}
         \resumeItemListEnd
-  
-
-    % From the template:  
-    % \resumeSubheading
-    %   {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
-    %   {Southwestern University}{Georgetown, TX}
-    %   \resumeItemListStart
-    %     \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
-    %     \resumeItem{Developed a game in Java to test the generated dungeons}
-    %     \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
-    %     \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
-    %     \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
-    %     \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
-    %   \resumeItemListEnd
 
   \resumeSubHeadingListEnd
-  
+
 %-----------PROJECTS-----------
 \color{NavyBlue}
 \section{Technical Projects}
 \color{black}
     \resumeSubHeadingListStart
-    \resumeProjectHeading
-    {\textbf{Pathfinding Visualizer \href{https://pathfindingvisualizer.com}{\faLink}} $|$ TypeScript, React, HTML5 Canvas}{June 2025}
-      \resumeItemListStart
-        \resumeItem{Built a web app for visualizing pathfinding algorithms (Dijkstra's, A*, and DFS) and random maze-generation algorithms.}
-        \resumeItem{Reduced animation time by 30\% (35,000 ms to 25,000 ms) by using \texttt{React.memo} and \texttt{useCallback}, cutting unnecessary renders from 115,000 to 16,000 (86\% reduction).}
-        \resumeItem{Refactored React DOM-based rendering to HTML5 Canvas, achieving 8-10x performance improvement (7 FPS to 60+ FPS) through \texttt{requestAnimationFrame} animation loops and elimination of React re-render overhead.}
-        \resumeItem{Set up a Continuous Deployment pipeline using GitHub Actions to automate deployment when pushed to main branch.}     
-      \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{Local AI Coding Agent \href{https://github.com/cheuyin/ai-agent-python}{\faLink}} $|$ Python, Google Gemini API, Rich}{May 2026}
+          \resumeItemListStart
+            \resumeItem{Engineered an autonomous agentic loop using the \textbf{Google Gemini API}, dispatching file system tool calls across up to 20 iterative model rounds until task
+completion.}
+            \resumeItem{Implemented context window management that tracks prompt token usage per round and trims conversation history when approaching the 1M-token limit, enabling
+indefinitely long sessions.}
+            \resumeItem{Blocked path traversal attacks via \texttt{os.path.commonpath} validation on all file operations; implemented 3-attempt exponential backoff retry for transient
+API failures.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{Pathfinding Visualizer \href{https://pathfindingvisualizer.com}{\faLink}} $|$ TypeScript, React, HTML5 Canvas}{June 2025}
+          \resumeItemListStart
+            \resumeItem{Built a web app for visualizing pathfinding algorithms (Dijkstra's, A*, and DFS) and random maze-generation algorithms.}
+            \resumeItem{Reduced animation time by 30\% (35,000 ms to 25,000 ms) by using \texttt{React.memo} and \texttt{useCallback}, cutting unnecessary renders from 115,000 to 16,000
+  (86\% reduction).}
+            \resumeItem{Refactored React DOM-based rendering to HTML5 Canvas, achieving 8-10x performance improvement (7 FPS to 60+ FPS) through \texttt{requestAnimationFrame} animation
+  loops and elimination of React re-render overhead.}
+            \resumeItem{Set up a Continuous Deployment pipeline using GitHub Actions to automate deployment when pushed to main branch.}
+          \resumeItemListEnd
 
       \resumeProjectHeading
         {\textbf{Eat n' Log \href{https://eatnlog.com/}{\faLink}} $|$ React Native, Redux, Figma}{June 2023 -- October 2023}
           \resumeItemListStart
-            \resumeItem{Worked with a multidisciplinary team of 15 to develop an IOS mobile app, enabling food lovers to seamlessly document and share their favourite dishes and dining experiences.}
-            \resumeItem{Developed five core frontend features using React Native with Redux for state management: search bar, tag filtering, home screen, authentication flow, and editable user entry pages.}
+            \resumeItem{Worked with a multidisciplinary team of 15 to develop an IOS mobile app, enabling food lovers to seamlessly document and share their favourite dishes and dining
+experiences.}
+            \resumeItem{Developed five core frontend features using React Native with Redux for state management: search bar, tag filtering, home screen, authentication flow, and
+editable user entry pages.}
           \resumeItemListEnd
+
     \resumeSubHeadingListEnd
-  
+
 %-----------PROGRAMMING SKILLS-----------
 \color{NavyBlue}
 \section{Technical Skills \& Certifications}
 \color{Black}
- \begin{itemize}[leftmargin=0.15in, label={}]
+  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
         \textbf{Languages:}{ TypeScript, JavaScript, Python, SQL, R, Java, C} \\
         \textbf{Frameworks:}{ React, Express.js } \\
         \textbf{Other:}{ Node.js, PostgreSQL, Docker, Git, AWS, RESTful APIs, Sequelize ORM, Linux, Prompt Engineering} \\
         \textbf{Certifications:}{ AWS Certified Cloud Practitioner}
     }}
- \end{itemize}
- 
-% %----------INTERESTS%----------
-% \color{NavyBlue}
-% \section{Interests}
-% \color{black}
-% Traveling, language-learning, reading, mindfulness and meditation
+  \end{itemize}
 
 %-------------------------------------------
 \end{document}
