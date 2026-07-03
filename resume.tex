@@ -60,10 +60,10 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
+\newcommand{\resumeProjectHeading}[1]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+      \small#1 & \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -90,12 +90,12 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {The University of British Columbia $|$ GPA: 4.20/4.33}{September 2022 -- May 2027}
+      {The University of British Columbia}{September 2022 -- May 2027}
       {B.Sc, Major in Computer Science}{Vancouver, BC}
       \resumeItemListStart
         \resumeItem{\textbf{Courses}: Machine Learning, Computer Networking, Relational Databases, Algorithms \& Data Structures, Computer Systems \& Hardware, Object-Oriented
 Programming}
-        \resumeItem{\textbf{Awards:} 2023--2024 Charles \& Jane Banks Scholarship, 2022--2023 UBC Science Scholar (standing of 90\%+) \& Dean's List}
+        \resumeItem{\textbf{Awards:} 2025 Dean's List, 2024 Charles \& Jane Banks Scholarship, 2023 Dean's List}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -106,12 +106,12 @@ Programming}
       {Software Engineer Intern $|$ \normalfont{TypeScript, Express.js, PostgreSQL, AWS, React}}{January 2024 -- July 2024}
       {VoltSafe Inc.} {Vancouver, BC}
         \resumeItemListStart
-          \resumeItem{Designed and implemented an end-to-end roles-based access control system with an Express.js, PostgreSQL, and AWS Cognito backend, ensuring controlled access to the
+          \resumeItem{Designed and implemented an end-to-end role-based access control system with an Express.js, PostgreSQL, and AWS Cognito backend, ensuring controlled access to the
   internal admin dashboard.}
           \resumeItem{Developed and Dockerized a server monitoring system using React, Express, and Prometheus, enabling real-time collection and analysis of CPU, RAM, and disk metrics
 across 7+ EC2 web and database servers.}
-          \resumeItem{Developed an image and document storage system with a RESTful API for the marina management app, leveraging AWS S3 to optimize performance and reduce bandwidth
-costs, enabling users to upload, storage, and retrieve documents and images.}
+          \resumeItem{Developed an image and document storage system with a RESTful API for the marina management app, using AWS S3 to optimize performance and reduce bandwidth
+costs and allowing users to upload, store, and retrieve documents and images.}
           \resumeItem{Conducted a performance analysis of the marina management app using Chrome Lighthouse, reducing total app bundle size by 22\% by pruning unused static assets,
 leading to improved load times.}
         \resumeItemListEnd
@@ -121,7 +121,6 @@ leading to improved load times.}
         {iSmart Education Canada}{Vancouver, BC}
         \resumeItemListStart
           \resumeItem{Designed and taught weekly CS lessons on algorithms, data structures, and Java programming.}
-          \resumeItem{Generated \$3000+ revenue for the company part-time.}
           \resumeItem{Exceeded expectations by supporting students, some still in primary school, in achieving 5/5 on the AP CSA 2023 exam.}
         \resumeItemListEnd
 
@@ -131,10 +130,19 @@ leading to improved load times.}
 \section{Projects}
     \resumeSubHeadingListStart
 
-      \resumeProjectHeading
-        {\textbf{Local AI Coding Agent} $|$ Python, Google Gemini API, Rich $|$ \href{https://github.com/cheuyin/ai-agent-python}{\underline{github.com/cheuyin/ai-agent-python}}}{May 2026}
+    \resumeProjectHeading
+        {\textbf{UBC Course Explorer} $|$ TypeScript, React, Express.js, Node.js $|$ \href{https://github.com/cheuyin/ubc-course-explorer}{\underline{github.com/cheuyin/ubc-course-explorer}}}
           \resumeItemListStart
-            \resumeItem{Engineered an autonomous agentic loop using the \textbf{Google Gemini API}, dispatching file system tool calls across up to 20 iterative model rounds until task
+            \resumeItem{Built a full-stack analytics app for exploring 64,000+ UBC course sections across 189 departments, featuring grade-trend charts, instructor and department profiles, and a campus room finder, using React 19, TanStack Query, and an Express + TypeScript REST API.}
+            \resumeItem{Implemented a JSON query language supporting nested boolean filters (AND/OR/NOT), wildcard string matching, multi-key sorting, and GROUP-BY aggregations (MAX/MIN/AVG/SUM/COUNT), with a validation layer that returns precise field-level error messages; verified by 100+ integration tests.}
+            \resumeItem{Engineered an asynchronous data-ingestion pipeline that unzips raw archives, parses course JSON, and scrapes building/room data from HTML (parse5) into a file-backed store, with job-status polling endpoints for long-running uploads and no external database.}
+          \resumeItemListEnd
+
+
+      \resumeProjectHeading
+        {\textbf{Local AI Coding Agent} $|$ Python, Google Gemini API, Rich $|$ \href{https://github.com/cheuyin/ai-agent-python}{\underline{github.com/cheuyin/ai-agent-python}}}
+          \resumeItemListStart
+            \resumeItem{Engineered an autonomous agentic loop using the Google Gemini API, dispatching file system tool calls across up to 20 iterative model rounds until task
 completion.}
             \resumeItem{Implemented context window management that tracks prompt token usage per round and trims conversation history when approaching the 1M-token limit, enabling
 indefinitely long sessions.}
@@ -143,23 +151,11 @@ API failures.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-        {\textbf{Pathfinding Visualizer} $|$ TypeScript, React, HTML5 Canvas $|$ \href{https://pathfindingvisualizer.com}{\underline{pathfindingvisualizer.com}}}{June 2025}
+        {\textbf{Pathfinding Visualizer} $|$ TypeScript, React, HTML5 Canvas $|$ \href{https://pathfindingvisualizer.com}{\underline{https://cheuyin.github.io/pathfinding-visualizer/}}}
           \resumeItemListStart
             \resumeItem{Built a web app for visualizing pathfinding algorithms (Dijkstra's, A*, and DFS) and random maze-generation algorithms.}
-            \resumeItem{Reduced animation time by 30\% (35,000 ms to 25,000 ms) by using \texttt{React.memo} and \texttt{useCallback}, cutting unnecessary renders from 115,000 to 16,000
-  (86\% reduction).}
-            \resumeItem{Refactored React DOM-based rendering to HTML5 Canvas, achieving 8-10x performance improvement (7 FPS to 60+ FPS) through \texttt{requestAnimationFrame} animation
-  loops and elimination of React re-render overhead.}
+            \resumeItem{Rewrote the rendering pipeline from React DOM to HTML5 Canvas with \texttt{requestAnimationFrame} loops and applied \texttt{React.memo}/\texttt{useCallback} memoization, cutting redundant renders 86\% (115,000 to 16,000) and raising frame rate 8--10x (7 to 60+ FPS).}
             \resumeItem{Set up a Continuous Deployment pipeline using GitHub Actions to automate deployment when pushed to main branch.}
-          \resumeItemListEnd
-
-      \resumeProjectHeading
-        {\textbf{Eat n' Log} $|$ React Native, Redux, Figma $|$ \href{https://eatnlog.com/}{\underline{eatnlog.com}}}{June 2023 -- October 2023}
-          \resumeItemListStart
-            \resumeItem{Worked with a multidisciplinary team of 15 to develop an IOS mobile app, enabling food lovers to seamlessly document and share their favourite dishes and dining
-experiences.}
-            \resumeItem{Developed five core frontend features using React Native with Redux for state management: search bar, tag filtering, home screen, authentication flow, and
-editable user entry pages.}
           \resumeItemListEnd
 
     \resumeSubHeadingListEnd
@@ -168,9 +164,9 @@ editable user entry pages.}
 \section{Skills}
   \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-        \textbf{Languages:}{ TypeScript, JavaScript, Python, SQL, R, Java, C} \\
-        \textbf{Frameworks:}{ React, Express.js } \\
-        \textbf{Other:}{ Node.js, PostgreSQL, Docker, Git, AWS, RESTful APIs, Sequelize ORM, Linux, Prompt Engineering} \\
+        \textbf{Languages:}{ TypeScript, Python, SQL, R, Java, C, JavaScript} \\
+        \textbf{Frameworks:}{ FastAPI, React, Express.js, SQLModel, LangChain } \\
+        \textbf{Other:}{ Node.js, PostgreSQL, Docker, Git, AWS, RESTful APIs, SQL ORMs, Linux, Prompt Engineering} \\
         \textbf{Certifications:}{ AWS Certified Cloud Practitioner}
     }}
   \end{itemize}
