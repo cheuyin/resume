@@ -1,22 +1,15 @@
 % ----- DOCUMENT CLASS ----- %
 \documentclass[letterpaper]{article}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\input{glyphtounicode}
-\usepackage[dvipsnames]{xcolor}
-\usepackage{graphicx}
-\usepackage{fontawesome5}
-
+% ----- PACKAGES ----- %
+\usepackage[empty]{fullpage}        % remove default margins/header space
+\usepackage{titlesec}               % section title formatting
+\usepackage{enumitem}               % list spacing control
+\usepackage[hidelinks]{hyperref}    % clickable links, no boxes
+\usepackage{fancyhdr}               % blank header/footer
+\usepackage[english]{babel}         % hyphenation patterns
+\usepackage[dvipsnames]{xcolor}     % NavyBlue and other named colors
+\input{glyphtounicode}              % map glyphs to Unicode (ATS-readable text)
 
 % ----- FONTS ----- %
 \usepackage[sfdefault]{noto-sans}
@@ -45,7 +38,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
+  \vspace{-10pt}\scshape\raggedright\large\color{NavyBlue}
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensures generated PDF is machine / ATS readable %
@@ -67,21 +60,12 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
@@ -96,19 +80,14 @@
 
 % ----- RESUME HEADER ----- %
 \begin{center}
-    \color{NavyBlue}
-    \textbf{\huge \scshape Stanley Cheung} \\
-    \vspace{5pt}
-    \color{black}
+    {\color{NavyBlue}\textbf{\huge \scshape Stanley Cheung}} \\
     \vspace{5pt}
     \href{https://github.com/cheuyin}{\underline{github.com/cheuyin}} $|$
     \href{mailto:yinstanleycheung@gmail.com}{\underline{yinstanleycheung@gmail.com}}
 \end{center}
 
 %-----------EDUCATION-----------
-\color{NavyBlue}
 \section{Education}
-\color{black}
   \resumeSubHeadingListStart
     \resumeSubheading
       {The University of British Columbia $|$ GPA: 4.20/4.33}{September 2022 -- May 2027}
@@ -121,9 +100,7 @@ Programming}
   \resumeSubHeadingListEnd
 
 %----------- EXPERIENCE-----------
-\color{NavyBlue}
 \section{Experience}
-\color{black}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Software Engineer Intern $|$ \normalfont{TypeScript, Express.js, PostgreSQL, AWS, React}}{January 2024 -- July 2024}
@@ -151,13 +128,11 @@ leading to improved load times.}
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
-\color{NavyBlue}
-\section{Technical Projects}
-\color{black}
+\section{Projects}
     \resumeSubHeadingListStart
 
       \resumeProjectHeading
-        {\textbf{Local AI Coding Agent \href{https://github.com/cheuyin/ai-agent-python}{\faLink}} $|$ Python, Google Gemini API, Rich}{May 2026}
+        {\textbf{Local AI Coding Agent} $|$ Python, Google Gemini API, Rich $|$ \href{https://github.com/cheuyin/ai-agent-python}{\underline{github.com/cheuyin/ai-agent-python}}}{May 2026}
           \resumeItemListStart
             \resumeItem{Engineered an autonomous agentic loop using the \textbf{Google Gemini API}, dispatching file system tool calls across up to 20 iterative model rounds until task
 completion.}
@@ -168,7 +143,7 @@ API failures.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-        {\textbf{Pathfinding Visualizer \href{https://pathfindingvisualizer.com}{\faLink}} $|$ TypeScript, React, HTML5 Canvas}{June 2025}
+        {\textbf{Pathfinding Visualizer} $|$ TypeScript, React, HTML5 Canvas $|$ \href{https://pathfindingvisualizer.com}{\underline{pathfindingvisualizer.com}}}{June 2025}
           \resumeItemListStart
             \resumeItem{Built a web app for visualizing pathfinding algorithms (Dijkstra's, A*, and DFS) and random maze-generation algorithms.}
             \resumeItem{Reduced animation time by 30\% (35,000 ms to 25,000 ms) by using \texttt{React.memo} and \texttt{useCallback}, cutting unnecessary renders from 115,000 to 16,000
@@ -179,7 +154,7 @@ API failures.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-        {\textbf{Eat n' Log \href{https://eatnlog.com/}{\faLink}} $|$ React Native, Redux, Figma}{June 2023 -- October 2023}
+        {\textbf{Eat n' Log} $|$ React Native, Redux, Figma $|$ \href{https://eatnlog.com/}{\underline{eatnlog.com}}}{June 2023 -- October 2023}
           \resumeItemListStart
             \resumeItem{Worked with a multidisciplinary team of 15 to develop an IOS mobile app, enabling food lovers to seamlessly document and share their favourite dishes and dining
 experiences.}
@@ -190,9 +165,7 @@ editable user entry pages.}
     \resumeSubHeadingListEnd
 
 %-----------PROGRAMMING SKILLS-----------
-\color{NavyBlue}
-\section{Technical Skills \& Certifications}
-\color{Black}
+\section{Skills}
   \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
         \textbf{Languages:}{ TypeScript, JavaScript, Python, SQL, R, Java, C} \\
