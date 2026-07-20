@@ -106,12 +106,10 @@ Programming}
       {Software Engineer Intern $|$ \normalfont{TypeScript, Express.js, PostgreSQL, AWS, React}}{January 2024 -- July 2024}
       {VoltSafe Inc.} {Vancouver, BC}
         \resumeItemListStart
-          \resumeItem{Designed and implemented an end-to-end role-based access control system with an Express.js, PostgreSQL, and AWS Cognito backend, ensuring controlled access to the
-  internal admin dashboard.}
+          \resumeItem{Designed and implemented an end-to-end RBAC system using Express.js, PostgreSQL, and AWS Cognito to secure an internal admin dashboard.}
           \resumeItem{Developed and Dockerized a server monitoring system using React, Express, and Prometheus, enabling real-time collection and analysis of CPU, RAM, and disk metrics
 across 7+ EC2 web and database servers.}
-          \resumeItem{Developed an image and document storage system with a RESTful API for the marina management app, using AWS S3 to optimize performance and reduce bandwidth
-costs and allowing users to upload, store, and retrieve documents and images.}
+          \resumeItem{Built a RESTful document and image storage service for a marina management app using AWS S3, enabling users to upload, store, and retrieve files while reducing bandwidth costs.}
           \resumeItem{Conducted a performance analysis of the marina management app using Chrome Lighthouse, reducing total app bundle size by 22\% by pruning unused static assets,
 leading to improved load times.}
         \resumeItemListEnd
@@ -120,8 +118,7 @@ leading to improved load times.}
         {AP Computer Science Instructor}{October 2022 -- February 2023}
         {iSmart Education Canada}{Vancouver, BC}
         \resumeItemListStart
-          \resumeItem{Designed and taught weekly CS lessons on algorithms, data structures, and Java programming.}
-          \resumeItem{Exceeded expectations by supporting students, some still in primary school, in achieving 5/5 on the AP CSA 2023 exam.}
+          \resumeItem{Designed weekly algorithms, data structures, and Java lessons; supported students in achieving 5/5 on the 2023 AP CSA exam.}
         \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -129,6 +126,14 @@ leading to improved load times.}
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+        {\textbf{CreateYourStory.ai} $|$ Python, FastAPI, React, TypeScript, SQLModel $|$ \href{https://github.com/cheuyin/createyourstory.ai}{\underline{github.com/cheuyin/createyourstory.ai}}}
+          \resumeItemListStart
+            \resumeItem{Developed and deployed a full-stack AI storytelling app using React/TypeScript and FastAPI that generates interactive branching narratives from user prompts.}
+            \resumeItem{Built a resilient background-job system for asynchronous text and image generation with persisted job status, client polling, request validation, and failure handling.}
+            \resumeItem{Implemented JWT/Argon2 authentication, guest sessions, ownership-based authorization, and SQLModel persistence to securely manage saved stories.}
+          \resumeItemListEnd
 
     \resumeProjectHeading
         {\textbf{UBC Course Explorer} $|$ TypeScript, React, Express.js, Node.js $|$ \href{https://github.com/cheuyin/ubc-course-explorer}{\underline{github.com/cheuyin/ubc-course-explorer}}}
@@ -153,15 +158,7 @@ API failures.}
       \resumeProjectHeading
         {\textbf{AutoDater} $|$ TypeScript, Obsidian API $|$ \href{https://community.obsidian.md/plugins/autodater}{\underline{community.obsidian.md/plugins/autodater}}}
           \resumeItemListStart
-            \resumeItem{Launched an open-source Obsidian plugin that automates note timestamps, achieving 108 downloads and improving note traceability.}
-          \resumeItemListEnd
-
-      \resumeProjectHeading
-        {\textbf{Pathfinding Visualizer} $|$ TypeScript, React, HTML5 Canvas $|$ \href{https://pathfindingvisualizer.com}{\underline{https://cheuyin.github.io/pathfinding-visualizer/}}}
-          \resumeItemListStart
-            \resumeItem{Built a web app for visualizing pathfinding algorithms (Dijkstra's, A*, and DFS) and random maze-generation algorithms.}
-            \resumeItem{Rewrote the rendering pipeline from React DOM to HTML5 Canvas with \texttt{requestAnimationFrame} loops and applied \texttt{React.memo}/\texttt{useCallback} memoization, cutting redundant renders 86\% (115,000 to 16,000) and raising frame rate 8--10x (7 to 60+ FPS).}
-            \resumeItem{Set up a Continuous Deployment pipeline using GitHub Actions to automate deployment when pushed to main branch.}
+            \resumeItem{Launched an open-source Obsidian plugin that automates note timestamps, achieving 123 downloads and improving note traceability.}
           \resumeItemListEnd
 
     \resumeSubHeadingListEnd
@@ -170,9 +167,9 @@ API failures.}
 \section{Skills}
   \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-        \textbf{Languages:}{ TypeScript, Python, SQL, R, Java, C, JavaScript} \\
-        \textbf{Frameworks:}{ FastAPI, React, Express.js, SQLModel, LangChain } \\
-        \textbf{Other:}{ Node.js, PostgreSQL, Docker, Git, AWS, RESTful APIs, SQL ORMs, Linux, Prompt Engineering} \\
+        \textbf{Languages:}{ Python, TypeScript, SQL, Java, JavaScript} \\
+        \textbf{Frameworks:}{ FastAPI, Express.js, React, SQLModel} \\
+        \textbf{Other:}{ PostgreSQL, Docker, AWS, Linux, Git, Node.js, RESTful APIs} \\
         \textbf{Certifications:}{ AWS Certified Cloud Practitioner}
     }}
   \end{itemize}
