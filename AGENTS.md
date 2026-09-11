@@ -2,6 +2,8 @@
 
 This repo holds one public resume. `resume.typ` is the source of truth. `resume.pdf` is the compiled copy GitHub shows. `cover-letter.typ` is the cover letter template. Cover letters are always tailored, so do not commit a filled-in letter.
 
+The master resume is the full library for every later copy. It can run longer than one page. Do not drop a job, project, or bullet from `resume.typ` to save space. One-page cuts happen only on tailored copies in `applications/`.
+
 ## Compile
 
 Master files, from the repo root:

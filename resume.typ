@@ -22,7 +22,7 @@
 == Education
 
 #edu(
-  institution: "The University of British Columbia",
+  institution: "University of British Columbia",
   location: "Vancouver, BC",
   dates: "Expected November 2027",
   degree: "B.Sc. Computer Science | Average 88%",
@@ -31,6 +31,15 @@
 - *Awards:* Dean's List (2023, 2025); Charles & Jane Banks Scholarship (2024)
 
 == Experience
+
+#work(
+  title: "CPSC 310 Teaching Assistant",
+  location: "Vancouver, BC",
+  company: "University of British Columbia | TypeScript, Jest",
+  dates: dates-helper(start-date: "September 2026", end-date: "December 2026"),
+)
+- Lead two weekly 2-hour labs on OOP design patterns, TDD with Jest, and the design of large full-stack systems.
+- Help students debug project code in lab and on Piazza, walking through design, testing, and implementation issues.
 
 #work(
   title: "Software Engineer Intern",

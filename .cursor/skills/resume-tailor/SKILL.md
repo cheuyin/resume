@@ -237,6 +237,7 @@ Incorporate job description keywords while staying truthful.
 - Keep ONE complete document with ALL experiences
 - Include every bullet you've ever written
 - This is your "source of truth"
+- It may be longer than one page; do not cut it to fit a page
 
 ### Create Targeted Versions
 - Name files clearly: "JohnSmith_Resume_ProductManager_TechCorp.pdf"
@@ -319,7 +320,7 @@ There is no separate job-description-analyzer skill. Do Step 1 in chat, then tai
 
 This resume has no professional summary. Do not add one unless the user asks. Skip the summary section of the plan.
 
-Copy the masters into `applications/<yyyy-mm-company-role>/` and edit only those copies. Keep the result to one page. Follow `AGENTS.md`. Do not edit root `resume.typ` or `cover-letter.typ` for a posting.
+Copy the masters into `applications/<yyyy-mm-company-role>/` and edit only those copies. Keep the send copy to one page. The master may be longer than one page; do not cut `resume.typ` to fit a page. Follow `AGENTS.md`. Do not edit root `resume.typ` or `cover-letter.typ` for a posting.
 
 **Bold keywords** only inside Experience and Project bullets so a recruiter can skim the stack. Do not bold keywords on tool lists: the company tech line (`VoltSafe Inc. | TypeScript, ...`), the project tech line, or the Skills section. Project names stay bold as titles.
 
