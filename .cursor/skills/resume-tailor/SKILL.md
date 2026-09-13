@@ -329,3 +329,17 @@ Bold only terms that are actually in the work. Do not bold entire bullets. In Ty
 Compile the send file in that folder as `Yin_Cheung_Resume.pdf`. Do not put the company name in the filename you attach.
 
 Master `resume.typ` is the source of truth for GitHub. Targeted versions live only under `applications/`. Do not invent tools, metrics, or titles.
+
+### Commerce coursework (tailored copies only)
+
+The master degree line already has `Minor in Commerce`. Do not add a course list to root `resume.typ`.
+
+On a tailored copy, add this Education bullet when the posting is finance, markets, accounting, consulting, product, marketing, or otherwise wants a business background (investment firms, banks, PE/VC, asset management, insurers):
+
+```
+- Relevant coursework: Financial Accounting, Organizational Behaviour, Marketing
+```
+
+Put Financial Accounting first. Do not use course codes (`COMR 457`). Do not mark courses in progress.
+
+Skip this bullet on generic SWE, backend, full-stack, and other software-only postings. The minor on the degree line is enough.

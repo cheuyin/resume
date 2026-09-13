@@ -25,7 +25,7 @@
   institution: "University of British Columbia",
   location: "Vancouver, BC",
   dates: "Expected November 2027",
-  degree: "B.Sc. Computer Science | Average 88%",
+  degree: "B.Sc. Computer Science, Minor in Commerce | Average 88%",
   consistent: true,
 )
 - *Awards:* Dean's List (2023, 2025); Charles & Jane Banks Scholarship (2024)
@@ -35,11 +35,11 @@
 #work(
   title: "CPSC 310 Teaching Assistant",
   location: "Vancouver, BC",
-  company: "University of British Columbia | TypeScript, Jest",
+  company: "University of British Columbia | TypeScript, Mocha, Chai, Express.js, Node.js",
   dates: dates-helper(start-date: "September 2026", end-date: "December 2026"),
 )
-- Lead two weekly 2-hour labs on OOP design patterns, TDD with Jest, and the design of large full-stack systems.
-- Help students debug project code in lab and on Piazza, walking through design, testing, and implementation issues.
+- Lead two weekly 2-hour labs on OOP design patterns, TDD with Mocha and Chai, and the design of large full-stack systems.
+- Hold a weekly 2-hour office hour and help students debug project code in lab and on Piazza, walking through design, testing, and implementation issues.
 
 #work(
   title: "Software Engineer Intern",

@@ -33,7 +33,7 @@ mkdir -p applications/<yyyy-mm-company-role>
 cp resume.typ cover-letter.typ applications/<yyyy-mm-company-role>/
 ```
 
-2. Analyze the posting in chat. Follow the resume-tailor skill on `applications/<yyyy-mm-company-role>/resume.typ`: reorder, drop a weak project, and add keywords that are actually true. Put the tailoring plan in chat.
+2. Analyze the posting in chat. Follow the resume-tailor skill on `applications/<yyyy-mm-company-role>/resume.typ`: reorder, drop a weak project, and add keywords that are actually true. Put the tailoring plan in chat. Commerce coursework is tailored-only (see that skill); do not add a course list to the master.
 3. Bold matching keywords in Experience and Project bullets only. See Scannable keywords below.
 4. If the user asked for a cover letter, or the posting requires one, write it using `.cursor/skills/cover-letter-generator/SKILL.md`. Fill `applications/<yyyy-mm-company-role>/cover-letter.typ`. Put the analysis, alternative openings, and interview talking points in chat, not in Typst.
 5. Compile the send files in that folder:
