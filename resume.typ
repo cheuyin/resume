@@ -38,8 +38,8 @@
   company: "University of British Columbia | TypeScript, Mocha, Chai, Express.js, Node.js",
   dates: dates-helper(start-date: "September 2026", end-date: "December 2026"),
 )
-- Lead two weekly 2-hour labs on OOP design patterns, TDD with Mocha and Chai, and the design of large full-stack systems.
-- Hold a weekly 2-hour office hour and help students debug project code in lab and on Piazza, walking through design, testing, and implementation issues.
+- Lead two weekly 2-hour labs for \~60 students on OOP design patterns, cohesion and coupling, TDD with Mocha and Chai, and the design of large full-stack systems.
+- Hold my own weekly 2-hour office hour and help students debug project code in lab and on Piazza, walking through design, testing, and implementation issues.
 
 #work(
   title: "Software Engineer Intern",
@@ -73,7 +73,7 @@
   left: [*AutoDater* | TypeScript, Obsidian API (#link("https://community.obsidian.md/plugins/autodater")[Plugin])],
   right: dates-helper(start-date: "May 2025", end-date: "July 2026"),
 )
-- Shipped an Obsidian community plugin that writes Created/Updated dates into note frontmatter (500+ downloads).
+- Shipped an Obsidian community plugin that writes Created/Updated dates into note frontmatter (700+ downloads).
 - After a Reddit post (\~33k views), added date-format options, folder exclusions, and renameable property labels from user feedback; a 6-second debounce avoids extra writes while typing.
 
 #generic-one-by-two(
