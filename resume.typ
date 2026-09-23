@@ -51,6 +51,7 @@
 - Built an S3-backed file API for a marina management app so document and image uploads did not go through the app server.
 - Cut the marina app JS bundle 22% by pruning unused static assets after a Lighthouse pass.
 - Dockerized a Prometheus monitoring service for CPU, RAM, and disk on 7+ EC2 web and database servers; the React client polled a REST API with React Query.
+- Used Atlassian Jira and Confluence to manage day-to-day tasks and documentation, and developed new features on a 2-week Agile sprint cycle.
 
 == Projects
 
