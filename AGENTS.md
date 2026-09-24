@@ -20,6 +20,8 @@ Commit `resume.typ` and `resume.pdf` only when the generic resume gets better fo
 
 Commit `cover-letter.typ` only when the template or shared contact header changes. Do not commit a letter written for one company.
 
+`experiences.md` is the master library of STAR stories for cover letters. Commit it when a new true story is added. Do not put company-specific letter text in it.
+
 Do not commit a version of either document that exists only for one posting.
 
 ## Tailoring
@@ -63,9 +65,9 @@ Reorder the Skills list so matching skills come first. Leave the Skills names un
 
 ## Cover letters
 
-Read the cover-letter-generator skill before writing. Fill the lets at the top of the copied `cover-letter.typ` (`letter-date`, `company`, `company-location`, `greeting`) and replace the placeholder paragraphs.
+Read `.cursor/skills/cover-letter-generator/SKILL.md` before writing. The letter pulls from `resume.typ` and from `experiences.md`. If role, one strong story, or a real reason for this company is missing, stop and ask. Do not draft until those are known. Fill the lets at the top of the copied `cover-letter.typ` (`letter-date`, `company`, `company-location`, `greeting`) and replace the placeholder paragraphs.
 
-Keep the letter 250-400 words and one page. Match tone to the company: more formal for banks, insurers, and other enterprise roles. Research the company before using a company-knowledge hook. Do not invent tools, metrics, job titles, or company facts.
+Keep the letter under 300 words and one page. Match tone to the company: more formal for banks, insurers, and other enterprise roles. Research the company before using a company-knowledge hook. Do not invent tools, metrics, job titles, or company facts.
 
 If the posting wants resume, letter, and transcript in one PDF, say so after compiling. Do not merge a transcript unless the user asks.
 

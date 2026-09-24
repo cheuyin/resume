@@ -1,289 +1,89 @@
 ---
-name: cover-letter-generator
-description: Create personalized, compelling cover letters from resume and job description. Use when the user asks for a cover letter, application letter, or a posting requires one.
+name: swe-intern-cover-letter
+description: Write, draft, or revise cover letters for software engineering internship (or co-op) applications. Use this whenever the user asks to write, draft, edit, tighten, or review a cover letter for an SWE intern/co-op role — including "write me a cover letter for [company]", "help me apply to [team] as an intern", "does this cover letter sound good", or when the user pastes an internship job description and asks for an accompanying cover letter, even without the words "cover letter." Also use when the user asks for a general SWE cover letter template they can reuse across applications.
 ---
 
-# Cover Letter Generator
+# SWE Intern Cover Letter Writer
 
-## When to Use This Skill
+Cover letters for SWE internships fail in one of two predictable ways: they're generic ("I am a passionate, detail-oriented team player...") or they just repeat the resume in sentence form. This skill exists to avoid both by forcing specificity and a clear narrative.
 
-Use this skill when the user wants to:
-- Write a cover letter for a job application
-- Create a personalized application letter
-- Address specific job requirements in letter format
-- Mentions: "cover letter", "application letter", "write cover letter", "letter for job"
+## Step 1: Gather the three required inputs
 
-Use AFTER analyzing job description to have clear talking points.
+Before drafting, make sure you have:
 
-## Core Capabilities
+1. **Role + company** — what team/company, and anything the user knows about what the team does.
+2. **One strong project or experience** — the user's best, most relevant piece of technical work. Take this from `experiences.md` first, then from `resume.typ`. Only need one. A good cover letter goes deep on one thing, not shallow on five.
+3. **A reason this company/team specifically** — something concrete: their stack, a product the user uses, an engineering blog post, a mission statement, a specific team they're excited about. A company fact from research counts only when it connects to something the user actually said, or to a story already in `experiences.md` or `resume.typ`.
 
-- Generate personalized cover letters from resume + job description
-- Match tone to company culture
-- Address qualification gaps strategically
-- Create compelling opening hooks
-- Structure persuasive arguments for candidacy
-- Maintain authenticity while selling effectively
+Read `resume.typ` and `experiences.md` before deciding anything is missing. The resume supplies roles, dates, and the public bullets. `experiences.md` supplies the STAR stories. Extract what is already in the posting, those two files, or this chat. Do not ask again for something that is already there.
 
-## Cover Letter Philosophy
+If one of the three is genuinely missing and cannot be inferred without inventing it, stop. Do not draft the letter. In chat, name exactly which input is missing and ask the user for it in one short question. Do not fill the gap with a guessed metric, a guessed motive, or a company fact the user has no connection to.
 
-**The Problem:** Most cover letters are generic, boring, and add no value beyond the resume.
+If the user just wants a generic reusable template with no specific company, skip straight to Step 3 and use bracketed placeholders (e.g. `[COMPANY]`, `[SPECIFIC PRODUCT/TEAM DETAIL]`) for anything company-specific.
 
-**The Solution:** A great cover letter should:
-1. Show you've researched the company
-2. Connect YOUR specific experience to THEIR specific needs
-3. Address the "why you, why now, why here" questions
-4. Add personality and context a resume can't convey
+## Step 2: Pick the narrative before writing prose
 
-## The Perfect Cover Letter Structure
+Decide, in a sentence, what story this letter is telling: e.g. "built X, which shows I can do backend work at scale, and I want to do more of that at [company] because of Y." Everything in the letter should serve that one narrative. Resist the urge to mention every project or skill on the resume.
 
-### Length & Format
-- **Length:** 250-400 words (3-4 paragraphs)
-- **Format:** Professional business letter style
-- **Tone:** Confident but not arrogant, personalized but professional
+## Step 3: Structure
 
-### Structure Overview
-```
-[Your Contact Info]
-[Date]
-[Recipient Info]
-
-Opening Paragraph: Hook + Position + Why This Company (2-3 sentences)
-
-Body Paragraph 1: Your strongest qualification match (3-4 sentences)
-
-Body Paragraph 2: Additional qualifications + address any gaps (3-4 sentences)
-
-Closing Paragraph: Call to action + enthusiasm (2-3 sentences)
-
-[Professional Sign-off]
-```
-
-## Opening Paragraph Strategies
-
-The opening is critical - you have 5 seconds to grab attention.
-
-### Hook Types (Choose One)
-
-**1. Specific Company Knowledge**
-```
-"I was excited to see TechCorp's recent launch of your API marketplace - as a Product Manager who's spent 3 years building developer tools, I immediately saw how my experience could accelerate your platform growth."
-```
-
-**2. Mutual Connection**
-```
-"Sarah Chen on your engineering team mentioned you're looking for a PM to lead the payments initiative. Having worked with Sarah at [Previous Company] and led payment integrations at [Current Company], I'd love to discuss how I could contribute."
-```
-
-**3. Problem-Solver**
-```
-"Your job description mentions the challenge of aligning technical and business stakeholders - I've navigated this exact challenge, successfully launching 8 products by building shared roadmap visibility across engineering, sales, and executive teams."
-```
-
-**4. Impressive Achievement**
-```
-"Last year, I led a product that grew from 0 to 100K users in 6 months. I'm excited about the opportunity to bring that growth mindset to [Company]'s expanding product line."
-```
-
-**5. Industry Insight**
-```
-"The B2B payments space is at an inflection point, and [Company]'s approach to embedded finance positions you perfectly for the next wave. As someone who's been building in fintech for 5 years, I'd love to contribute to that growth."
-```
-
-### Opening Don'ts
-- ❌ "I am writing to apply for..." (boring, obvious)
-- ❌ "I am the perfect candidate..." (let them decide)
-- ❌ "I saw your job posting on LinkedIn..." (generic)
-- ❌ Starting with "I" (start with them or a hook)
-
-## Body Paragraph Frameworks
-
-### Body Paragraph 1: Direct Match
-
-Connect your strongest experience to their top requirement.
-
-**Formula:** [Their Need] + [Your Exact Experience] + [Specific Result]
+Always use this shape, in this order:
 
 ```
-Your focus on data-driven product decisions aligns perfectly with my approach. At [Company], I implemented a product analytics framework that increased feature adoption by 40% by identifying and prioritizing high-impact opportunities through A/B testing and user behavior analysis.
+[Opening — 1-2 sentences]
+Role, company, and a specific hook. Never open with "I am writing to apply for..."
+
+[Proof paragraph — 1 paragraph]
+The single strongest project/experience: what was built, what technical
+decisions were made, and the outcome (metrics if available: scale, users,
+performance, a result that mattered). Framed as solving a problem, not
+as a list of technologies.
+
+[Why-this-company paragraph — 1 paragraph]
+One concrete, specific connection to this company/team (stack, product,
+blog post, mission, team focus) tied to what the user wants to learn or
+contribute. This is the paragraph most people fake — it must reference
+something real and specific, not "innovative culture" or "fast-paced
+environment."
+
+[Close — 1-2 sentences]
+Restate interest, thank them, note availability/openness to talk further.
 ```
 
-### Body Paragraph 2: Broader Value + Gap Handling
+## Step 4: Writing rules (apply while drafting, not just at review)
 
-Show additional value and proactively address concerns.
+- **Under 300 words, one page.** Interns' cover letters get skimmed in seconds; padding hurts more than it helps.
+- **Specificity beats adjectives.** "Cut query latency 40% by adding a caching layer" beats "detail-oriented and results-driven." If a sentence could describe literally any other applicant, rewrite or cut it.
+- **Don't repeat the resume.** The letter's job is to supply the *why* and the narrative connecting things, not to re-list resume bullets in paragraph form. The story comes from `experiences.md`. The resume is the check that the story is true.
+- **Ban list, unless the user's own words justify it:** "passionate," "hard-working," "team player," "detail-oriented," "fast-paced environment," "innovative," "cutting-edge," "synergy." These are fine as descriptions the user earns through evidence, never as claims on their own.
+- **Active voice, first person, plain sentences.** Avoid corporate throat-clearing ("I am reaching out to express my interest...").
+- **One paragraph = one idea.** If the "why this company" paragraph drifts into a second project, split it or cut it.
+- **Do not invent tools, metrics, job titles, or company facts.** If a number or a motive is not in `experiences.md`, `resume.typ`, or the user's message, leave it out or stop and ask.
 
-**If you have gaps, address them:**
-```
-While my SQL experience is developing (currently completing DataCamp's SQL track), I bring strong analytical skills demonstrated through building Tableau dashboards that informed $2M in strategic decisions. I've consistently collaborated effectively with data teams and have a track record of quickly ramping on new tools.
-```
+## Step 5: Output
 
-**If no gaps, add more value:**
-```
-Beyond product management, I bring [relevant additional skill]. At [Company], this enabled me to [specific achievement]. I'm particularly drawn to [Company] because [specific reason showing research].
-```
+Write the letter into the copied `cover-letter.typ` in `applications/<yyyy-mm-company-role>/`. Keep the header, date, recipient, greeting, and sign-off in that file. Do not edit the root `cover-letter.typ` for a posting. Do not produce a `.docx`.
 
-## Closing Paragraph
-
-End with confidence and a clear call to action.
-
-**Strong Closing Example:**
-```
-I'm excited about the opportunity to bring my [specific skill] experience to [Company]'s [specific initiative or product]. I'd welcome the chance to discuss how my background in [key area] could contribute to your team's goals. Thank you for considering my application.
-```
-
-**Elements of a Good Close:**
-- Express genuine enthusiasm (for something specific)
-- Reference a specific contribution you'd make
-- Clear call to action (discuss, meet, etc.)
-- Thank them
-
-**Closing Don'ts:**
-- ❌ "I look forward to hearing from you" (passive)
-- ❌ "Please find my resume attached" (obvious)
-- ❌ "I am available for an interview at your convenience" (desperate)
-
-## Complete Cover Letter Template
-
-```
-[Your Name]
-[Your Email] | [Your Phone] | [LinkedIn URL]
-[City, State]
-
-[Date]
-
-[Hiring Manager Name, if known]
-[Title]
-[Company Name]
-[Company Address]
-
-Dear [Mr./Ms. Last Name / Hiring Manager],
-
-[OPENING HOOK - 1-2 sentences grabbing attention with company knowledge, mutual connection, or impressive achievement]
-
-[BRIDGE TO POSITION - 1 sentence stating the role and your interest]
-
-[BODY 1 - 3-4 sentences connecting your strongest relevant experience to their primary requirement. Include specific metrics and results.]
-
-[BODY 2 - 3-4 sentences adding additional value, addressing any gaps if needed, and demonstrating company research/culture fit]
-
-[CLOSING - 2-3 sentences expressing enthusiasm, suggesting next steps, and thanking them]
-
-Sincerely,
-[Your Name]
-```
-
-## Industry-Specific Considerations
-
-### Tech/Engineering
-- Mention specific technologies
-- Reference GitHub, portfolio, or technical projects
-- Show you understand their tech stack
-
-### Marketing/Creative
-- Show creativity in the letter itself (within reason)
-- Reference their campaigns or brand voice
-- Include relevant metrics (engagement, conversion, etc.)
-
-### Finance/Consulting
-- More formal tone
-- Lead with credentials/certifications
-- Emphasize analytical rigor and results
-
-### Startup vs. Enterprise
-**Startup:** More casual, show scrappiness, emphasize growth mindset
-**Enterprise:** More formal, emphasize process and scale experience
-
-## Handling Common Scenarios
-
-### When You Don't Know the Hiring Manager
-```
-Dear Hiring Manager,
-OR
-Dear [Department] Team,
-OR
-Dear [Company Name] Recruiting Team,
-```
-Avoid "To Whom It May Concern" (too impersonal)
-
-### When You Have a Referral
-Lead with it:
-```
-"[Name] on your [team] team suggested I reach out about the [Position] role. Having [connection to referrer], I was excited to learn about [Company]'s work in [area]."
-```
-
-### When You're Underqualified
-Don't apologize. Instead, emphasize:
-- Transferable skills
-- Quick learning ability
-- Genuine enthusiasm
-- Related experience that compensates
-
-### When You're Overqualified
-Explain your motivation:
-```
-"After 10 years leading large teams, I'm energized by the opportunity to return to hands-on [function] work at a company where I can make direct impact on [specific area]."
-```
-
-### When Addressing Career Change
-```
-"While my background is in [Previous Field], I've been actively building [New Field] skills through [courses, projects, etc.]. My experience in [transferable skill] translates directly to [new role] through [specific connection]."
-```
-
-## Output Format
-
-When generating a cover letter, provide:
-
-```markdown
-# COVER LETTER FOR [POSITION] AT [COMPANY]
-
-## Analysis Summary
-- Match Score: [From JD Analyzer]
-- Key Strengths to Highlight: [List]
-- Gaps to Address: [List or "None"]
-- Company Research Notes: [Key facts to reference]
-
-## Generated Cover Letter
-
-[Full cover letter text]
-
----
-
-## Alternative Openings
-
-**Option 1 (Company Knowledge):**
-[Alternative opening hook]
-
-**Option 2 (Achievement-Led):**
-[Alternative opening hook]
-
-## Key Talking Points for Interview
-- [Point 1 from the letter to expand on]
-- [Point 2]
-- [Point 3]
-```
-
-Put the letter body into the copied `cover-letter.typ` in the application folder and compile it. Put the analysis summary, alternative openings, and talking points in chat, not in the Typst file. Do not edit the root template for a posting.
-
-## Quality Checklist
-
-Before delivering any cover letter:
-
-1. ✅ Opens with a hook (not "I am writing to apply")
-2. ✅ Mentions specific company knowledge
-3. ✅ Connects experience directly to job requirements
-4. ✅ Includes at least one specific metric/achievement
-5. ✅ Addresses any obvious gaps (if applicable)
-6. ✅ Has confident but not arrogant tone
-7. ✅ Ends with clear call to action
-8. ✅ Is 250-400 words (3-4 paragraphs)
-9. ✅ Contains no typos or grammatical errors
-10. ✅ Would make you want to interview this person
-
-## This repository
-
-Fill the copied `cover-letter.typ` in `applications/<yyyy-mm-company-role>/`. Keep the header, date, recipient, greeting, and sign-off in that file. Compile with:
+Compile with:
 
 ```bash
 typst compile applications/<yyyy-mm-company-role>/cover-letter.typ applications/<yyyy-mm-company-role>/cover-letter.pdf
 ```
 
-Follow `AGENTS.md`. Research the company before using a company-knowledge hook. Do not invent tools, metrics, job titles, or company facts.
+Put the one-sentence narrative, alternate openings, and interview talking points in chat, not in the Typst file. Follow `AGENTS.md`.
+
+After drafting, briefly flag (in 1-2 sentences, not a big critique section) anything you had to guess at or any placeholder the user should fill in. Do not silently invent metrics, company facts, or project details that weren't given.
+
+When the user tells a new true story in chat, add it to `experiences.md` as crisp STAR bullets.
+
+## Example (illustrative shape, not a template to copy verbatim)
+
+**Input:** Intern SWE role at a devtools startup; project = built a CLI tool that parallelized their team's test suite, cutting CI time from 12 min to 4 min; reason = the company's blog post about rebuilding their build system for speed.
+
+**Output shape:**
+- Opens naming the role and the CI-time detail as the hook
+- Proof paragraph: what the CLI does, the technical choice (parallelization strategy), the 12→4 min result
+- Why-this-company paragraph: ties their public writing about build-system speed to the user's own interest in fast developer tooling
+- Close: thanks + availability
+
+If the user wants, offer to also produce 2-3 alternate openings so they can pick a tone (more technical vs. more narrative). Do not generate multiple full drafts unless asked, since one well-built letter is the point.
