@@ -74,7 +74,7 @@
   left: [*AutoDater* | TypeScript, Obsidian API (#link("https://community.obsidian.md/plugins/autodater")[Plugin])],
   right: dates-helper(start-date: "May 2025", end-date: "July 2026"),
 )
-- Shipped an Obsidian community plugin that writes Created/Updated dates into note frontmatter (700+ downloads).
+- Shipped an Obsidian community plugin that writes Created/Updated dates into note frontmatter (1,000+ downloads).
 - After a Reddit post (\~33k views), added date-format options, folder exclusions, and renameable property labels from user feedback; a 6-second debounce avoids extra writes while typing.
 
 #generic-one-by-two(
